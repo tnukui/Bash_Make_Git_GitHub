@@ -10,7 +10,7 @@ function low_or_high {
 }
 
 
-the_ans=$( ls -1 | wc -l )
+the_ans=$(ls -l | grep "^-" | wc -l)
 echo "How many files do you think there are in the directory?"
 
 read line
