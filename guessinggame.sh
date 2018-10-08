@@ -1,14 +1,11 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 function low_or_high {
  if [[ $1 -gt $2 ]]
  then
-  echo "$1 is too high."
- elif [[ $1 -lt $2 ]]
- then
-  echo "$1 is too low."
+  echo "No...$1 is too high."
  else
-  echo "Input a number."
+  echo "No...$1 is too low."
  fi
 }
 
@@ -20,9 +17,9 @@ read line
 while [[ $the_ans -ne $line ]]
 do
  low_or_high $line $the_ans
- echo "Try to guess again."
+ echo "Try to guess again! I am sure you can do it!"
  read line
 done
 
-echo "Correct." 
+echo "Congratulations!! You did it!!"
 
